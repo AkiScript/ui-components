@@ -1,0 +1,144 @@
+$padding: 8;
+
+$breakpoints: (
+        'sm': 600px,
+        'md': 900px,
+        'lg': 1280px
+);
+
+$justifyContent: (
+        flex-start,
+        center,
+        space-between,
+        flex-end
+);
+
+$alignContent: (
+        stretch,
+        flex-start,
+        center,
+        flex-end,
+        space-between,
+        space-around
+);
+
+$alignItems: (
+        stretch,
+        flex-start,
+        center,
+        flex-end,
+        baseline
+);
+
+$direction: (
+        row,
+        row-reverse,
+        column,
+        column-reverse
+);
+
+@mixin breakpoint($name) {
+  @media screen and (min-width: map-get($breakpoints, $name)) {
+    @content;
+  }
+}
+
+.grid {
+  &__container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+  }
+
+  &__item {
+    display: block;
+    box-sizing: border-box;
+    margin: 0;
+  }
+
+  @for $i from 1 to 13 {
+    &__xs-none {
+      display: none;
+    }
+
+    &__xs-#{$i} {
+      flex-basis: calc($i/12) * 100%;
+      display: block;
+    }
+  }
+
+  @include breakpoint('sm') {
+    @for $i from 1 to 13 {
+      &__sm-none {
+        display: none;
+      }
+
+      &__sm-#{$i} {
+        flex-basis: calc($i/12) * 100%;
+        display: block;
+      }
+    }
+  }
+
+  @include breakpoint('md') {
+    @for $i from 1 to 13 {
+      &__md-none {
+        display: none;
+      }
+
+      &__md-#{$i} {
+        flex-basis: calc($i/12) * 100%;
+        display: block;
+      }
+    }
+  }
+
+  @include breakpoint('lg') {
+    @for $i from 1 to 13 {
+      &__lg-none {
+        display: none;
+      }
+      
+      &__lg-#{$i} {
+        flex-basis: calc($i/12) * 100%;
+        display: block;
+      }
+    }
+  }
+
+  @for $i from 0 to 11 {
+    &__spacing-#{$i} {
+      margin: -$i * 4 + px;
+      width: calc(100% + #{$padding * $i + 'px'});
+    }
+
+    &__spacing-#{$i} > &__item {
+      padding: $i * 4 + px;
+    }
+  }
+
+  @each $value in $justifyContent {
+    &__justifyContent-#{$value} {
+      justify-content: $value;
+    }
+  }
+
+  @each $value in $alignContent {
+    &__alignContent-#{$value} {
+      align-content: $value;
+    }
+  }
+
+  @each $value in $alignItems {
+    &__alignItems-#{$value} {
+      align-items: $value;
+    }
+  }
+
+  @each $value in $direction {
+    &__direction-#{$value} {
+      flex-direction: $value;
+    }
+  }
+}
