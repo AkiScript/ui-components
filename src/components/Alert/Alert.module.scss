@@ -1,0 +1,30 @@
+.alert {
+    border: 1px solid;
+    padding: 16px;
+    border-radius: 16px;
+
+    &__default {
+        border-color: #d2d2d7;
+        background-color: rgba(0, 0, 0, 0.02);
+    }
+
+    &__error {
+        border-color: rgba(227, 0, 0, 0.4);
+        background-color: #fff2f4;
+    }
+
+    &__success {
+        border-color: #856404;
+        background-color: #fff3cd;
+    }
+
+    &__warning {
+        border-color: #856404;
+        background-color: #fff3cd;
+    }
+
+    &__info {
+        border-color: #0c5460;
+        background-color: #d1ecf1;
+    }
+}
