@@ -23,7 +23,7 @@ const COLOR_MAP = {
 
 const Button = ({
   size = "base",
-  color = 'neutral',
+  color = 'primary',
   variant = "pill",
   disabled = false,
   className = "",

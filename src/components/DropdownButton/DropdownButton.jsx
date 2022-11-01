@@ -1,19 +1,14 @@
 import React, { useState } from "react";
-import classnames from "classnames";
+import cn from "classnames";
+import ArrowIcon from "../../icons/arrow-icon";
 import classes from "./DropdownButton.module.scss";
 
-const DropdownButton = ({ options = [], className }) => {
+const DropdownButton = ({ options = [], className, title }) => {
   const [isOpen, setIsOpen] = useState(false);
-  const [selectedOption, setSelectedOption] = useState(null);
-
-  const onOptionClicked = (value) => {
-    setSelectedOption(value);
-    setIsOpen(false);
-  };
 
   return (
     <div
-      className={classnames(
+      className={cn(
         {
           [classes["dropdown-button"]]: true,
         },
@@ -21,18 +16,31 @@ const DropdownButton = ({ options = [], className }) => {
       )}
     >
       <div
-        className={classnames({
+        className={cn({
           [classes["dropdown-button__header"]]: true,
         })}
         onClick={() => setIsOpen(!isOpen)}
       >
-        {selectedOption || "Select ..."}
+        <span>{title}</span>
+        <span
+          className={cn({
+            [classes["dropdown-button__arrow-up"]]: isOpen,
+          })}
+        >
+          <ArrowIcon />
+        </span>
       </div>
       {isOpen && (
         <ul>
-          {options.map((option, i) => (
-            <li onClick={() => onOptionClicked(option)} key={i}>
-              {option}
+          {options.map(({ id, text, onClick }) => (
+            <li
+              onClick={() => {
+                onClick(id);
+                setIsOpen(false);
+              }}
+              key={id}
+            >
+              {text}
             </li>
           ))}
         </ul>

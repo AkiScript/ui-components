@@ -9,10 +9,17 @@ const VARIANT_MAP = {
   block: "block",
 };
 
+const SIZE_MAP = {
+  base: "base",
+  elevated: "elevated",
+  reduced: "reduced",
+};
+
 const ButtonGroup = ({
   buttons = [],
   variant = "pill",
   className = "",
+  size = 'base',
   onClick,
 }) => {
   const [selectedId, setSelectedId] = useState(-1);
@@ -22,7 +29,7 @@ const ButtonGroup = ({
       className={classnames(
         {
           [classes["button-group"]]: true,
-          [classes[`button-group-${VARIANT_MAP[variant]}`]]: variant,
+          [classes[`button-group__${VARIANT_MAP[variant]}`]]: variant,
         },
         className
       )}
@@ -33,8 +40,8 @@ const ButtonGroup = ({
           name={name}
           className={classnames({
             [classes["button"]]: true,
-            [classes[`button-${VARIANT_MAP[variant]}`]]: variant,
-            [classes["button-active"]]: selectedId === i,
+            [classes[`button__${VARIANT_MAP[variant]}-${SIZE_MAP[size]}`]]: true,
+            [classes["button__active"]]: selectedId === i,
           })}
           onClick={(event) => {
             setSelectedId(i);

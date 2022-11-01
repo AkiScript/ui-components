@@ -2,6 +2,39 @@
     border: 1px solid;
     padding: 16px;
     border-radius: 16px;
+    width: 100%;
+    position: relative;
+    display: flex;
+
+    h3 {
+        font-size: 22px;
+        font-weight: bold;
+        margin: 0 0 8px 0;
+
+        &:first-letter {
+            text-transform: capitalize;
+        }
+    }
+
+    p {
+        font-size: 18px;
+        margin: 0 0 8px 0;
+
+        &:first-letter {
+            text-transform: capitalize;
+        }
+    }
+
+    &__left-addons {
+        margin-right: 16px;
+    }
+
+    &__close {
+        cursor: pointer;
+        position: absolute;
+        right: 16px;
+        top: 16px;
+    }
 
     &__default {
         border-color: #d2d2d7;
@@ -14,8 +47,8 @@
     }
 
     &__success {
-        border-color: #856404;
-        background-color: #fff3cd;
+        border-color: #155724;
+        background-color: #d4edda;
     }
 
     &__warning {

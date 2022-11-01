@@ -2,23 +2,21 @@ import React from "react";
 import classes from "./Typography.module.scss";
 import cn from "classnames";
 
-const TYPE_MAP = {
-  h1: "h1",
-  h2: "h2",
-  h3: "h3",
-  h4: "h4",
-  h5: "h5",
-  h6: "h6",
-  body1: "body1",
-  body2: "body2",
-  caption: "caption",
-  overline: "overline",
-  subtitle1: "subtitle1",
-  subtitle2: "subtitle2",
+const SIZE_MAP = {
+  1: "1",
+  2: "2",
+  3: "3",
+  4: "4",
+  5: "5",
+  6: "6",
+  7: "7",
+  8: "8",
+  9: "9",
+  10: "10",
 };
 
 const Typography = ({
-    type = "body1",
+    size = 1,
     inline = false,
     children,
     className = '',
@@ -28,7 +26,7 @@ const Typography = ({
   const classNames = cn(
     {
       [classes["typography"]]: true,
-      [classes[`typography__${TYPE_MAP[type]}`]]: TYPE_MAP[type],
+      [classes[`typography__${SIZE_MAP[size]}`]]: SIZE_MAP[size],
       [classes["typography__inline"]]: inline,
     },
     className

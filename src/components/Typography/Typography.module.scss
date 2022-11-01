@@ -1,59 +1,45 @@
 .typography {
   display: block;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", "Helvetica", "Arial", sans-serif, "SF Pro Icons";
-  margin: 0;
-
-    &__h1, &__h2, &__h3, &__h4, &__h5,
-    &__subtitle1, &__subtitle2 {
-      font-weight: 500;
+  
+    &__1 {
+      font-size: 14px;
     }
   
-    &__body1, &__body2, &__caption, &__overline {
-      font-weight: 400;
-    }
-  
-    &__h1 {
-      font-size: 28px;
-    }
-  
-    &__h2 {
-      font-size: 24px;
-    }
-  
-    &__h3 {
-      font-size: 20px;
-    }
-  
-    &__h4 {
-      font-size: 18px;
-    }
-  
-    &__h5 {
+    &__2 {
       font-size: 16px;
     }
   
-    &__subtitle1 {
-      font-size: 14px;
+    &__3 {
+      font-size: 18px;
     }
   
-    &__subtitle2 {
-      font-size: 12px;
+    &__4 {
+      font-size: 20px;
     }
   
-    &__body1 {
-      font-size: 14px;
+    &__5 {
+      font-size: 22px;
     }
   
-    &__body2 {
-      font-size: 12px;
+    &__6 {
+      font-size: 24px;
     }
   
-    &__caption {
-      font-size: 10px;
+    &__7 {
+      font-size: 26px;
     }
   
-    &__overline {
-      font-size: 10px;
+    &__8 {
+      font-size: 28px;
+    }
+  
+    &__9 {
+      font-size: 30px;
+    }
+  
+    &__10 {
+      font-size: 32px;
     }
   
     &__inline {

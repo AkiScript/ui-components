@@ -4,7 +4,7 @@
     width: 100%;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", "Helvetica", "Arial", sans-serif, "SF Pro Icons";
 
-    &-pill {
+    &__pill {
         button:first-child {
             border-radius: 980px 0 0 980px;
         }
@@ -14,7 +14,7 @@
         }
     }
 
-    &-block {
+    &__block {
         button:first-child {
             border-radius: 8px 0 0 8px;
         }
@@ -29,19 +29,44 @@
     cursor: pointer;
     text-decoration: none;
     background-color: #fff;
-    font-size: 16px;
     border: 1px solid grey;
     outline: 0;
 
-    &-pill {
-        padding: 8px 10px;
+    &__pill {
+        &-base {
+            font-size: 16px;
+            padding: 8px 10px;
+        }
+
+        &-elevated {
+            font-size: 20px;
+            padding: 12px 14px;
+        }
+
+        &-reduced {
+            font-size: 12px;
+            padding: 4px 6px;
+        }
     }
 
-    &-block {
-        padding: 8px 16px;
+    &__block {
+        &-base {
+            font-size: 16px;
+            padding: 8px 16px;
+        }
+
+        &-elevated {
+            font-size: 20px;
+            padding: 12px 20px;
+        }
+
+        &-reduced {
+            font-size: 12px;
+            padding: 4px 12px;
+        }
     }
 
-    &-active {
+    &__active {
         background: #006EDB;
         color: #fff;
     }
