@@ -2,75 +2,60 @@ Button example
 
 ```
 <>
-    <div
-      style={{
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "space-between",
-        width: "600px",
-        marginBottom: '20px'
-      }}
-    >
+  <Grid container spacing={2}>
+    <Grid item>
+      <Button>default</Button>
+    </Grid>
+    <Grid item>
       <Button color="primary">primary</Button>
+    </Grid>
+    <Grid item>
       <Button color="secondary">secondary</Button>
+    </Grid>
+    <Grid item>
       <Button color="neutral">neutral</Button>
+    </Grid>
+    <Grid item>
       <Button color="danger">danger</Button>
-    </div>
-    <div
-      style={{
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "space-between",
-        width: "600px",
-        marginBottom: '20px'
-      }}
-    >
-      <Button color="primary">primary</Button>
-      <Button color="secondary">secondary</Button>
-      <Button color="neutral">neutral</Button>
-      <Button color="danger">danger</Button>
-    </div>
-
-    <div
-      style={{
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "space-between",
-        width: "1200px",
-        marginBottom: '20px'
-      }}
-    >
-      <Button color="primary" variant="block">primary</Button>
-      <Button color="secondary" variant="block">secondary</Button>
-      <Button color="neutral" variant="block">neutral</Button>
-      <Button color="danger" variant="block">danger</Button>
-    </div>
-    <div
-      style={{
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "space-between",
-        width: "1200px",
-        marginBottom: '20px'
-      }}
-    >
-      <Button color="primary" variant="block" disabled>primary</Button>
-      <Button color="secondary" variant="block" disabled>secondary</Button>
-      <Button color="neutral" variant="block" disabled>neutral</Button>
-      <Button color="danger" variant="block" disabled>danger</Button>
-    </div>
-    <div
-      style={{
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "space-between",
-        width: "1200px",
-        marginBottom: '20px'
-      }}
-    >
+    </Grid>
+  </Grid>
+  <Grid container spacing={2}>
+    <Grid item>
+      <Button variant="block">default</Button>
+    </Grid>
+    <Grid item>
+      <Button color="primary" variant="block">
+        primary
+      </Button>
+    </Grid>
+    <Grid item>
+      <Button color="secondary" variant="block">
+        secondary
+      </Button>
+    </Grid>
+    <Grid item>
+      <Button color="neutral" variant="block">
+        neutral
+      </Button>
+    </Grid>
+    <Grid item>
+      <Button color="danger" variant="block">
+        danger
+      </Button>
+    </Grid>
+  </Grid>
+  <Grid container spacing={2}>
+    <Grid item>
       <Button size="elevated">elevated</Button>
+    </Grid>
+    <Grid item>
       <Button size="reduced">reduced</Button>
-      <Button color="tertiary" variant="block">tertiary</Button>
-    </div>
-  </>
+    </Grid>
+    <Grid item>
+      <Button color="tertiary" variant="block">
+        tertiary
+      </Button>
+    </Grid>
+  </Grid>
+</>
   ```

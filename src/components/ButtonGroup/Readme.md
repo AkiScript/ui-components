@@ -1,29 +1,22 @@
 Button Group example
 
 ```
-  <>
-    <div
-      style={{
-        width: "600px",
-        marginBottom: "20px",
-      }}
-    >
-      <ButtonGroup
-        buttons={["One", "Two", "Three", "Four"]}
-        onClick={() => null}
-      />
-    </div>
-    <div
-      style={{
-        width: "600px",
-        marginBottom: "20px",
-      }}
-    >
-      <ButtonGroup
-        buttons={["One", "Two", "Three", "Four"]}
-        variant="block"
-        onClick={() => null}
-      />
-    </div>
-  </>
+<Grid container spacing={2}>
+  <Grid item>
+    <ButtonGroup
+      buttons={["Option 1", "Option 2", "Option 3", "Option 4"]}
+      variant="block"
+      isOutlined={true}
+      onClick={() => null}
+    />
+  </Grid>
+  <Grid item>
+    <ButtonGroup
+      buttons={["Option 1", "Option 2", "Option 3", "Option 4"]}
+      size="reduced"
+      variant="block"
+      onClick={() => null}
+    />
+  </Grid>
+</Grid>
   ```

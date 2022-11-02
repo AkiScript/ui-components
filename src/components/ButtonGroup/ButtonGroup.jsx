@@ -20,6 +20,7 @@ const ButtonGroup = ({
   variant = "pill",
   className = "",
   size = 'base',
+  isOutlined = false,
   onClick,
 }) => {
   const [selectedId, setSelectedId] = useState(-1);
@@ -42,6 +43,7 @@ const ButtonGroup = ({
             [classes["button"]]: true,
             [classes[`button__${VARIANT_MAP[variant]}-${SIZE_MAP[size]}`]]: true,
             [classes["button__active"]]: selectedId === i,
+            [classes["button__active-outlined"]]: selectedId === i && isOutlined,
           })}
           onClick={(event) => {
             setSelectedId(i);

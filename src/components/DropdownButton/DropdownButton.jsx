@@ -1,13 +1,21 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import cn from "classnames";
+import { useOutsideClick } from "../../hooks/use-outside-click";
 import ArrowIcon from "../../icons/arrow-icon";
 import classes from "./DropdownButton.module.scss";
 
 const DropdownButton = ({ options = [], className, title }) => {
   const [isOpen, setIsOpen] = useState(false);
 
+  const ref = useRef(null);
+
+  useOutsideClick(ref, () => {
+    setIsOpen(false);
+  });
+
   return (
     <div
+      ref={ref}
       className={cn(
         {
           [classes["dropdown-button"]]: true,

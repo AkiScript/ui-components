@@ -1,19 +1,20 @@
 Alert example
 
 ```
-<div
-      style={{
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "space-between",
-        width: "600px",
-        marginBottom: '20px'
-      }}
+<Grid container>
+  <Grid item sizing={{ lg: 12 }}>
+    <Alert
+      title="some title"
+      subtitle="some subtitle"
+      type="success"
+      leftAddons={<ArrowIcon />}
+      autodisapearSeconds={3000}
     >
-      <Alert title="Some title">default</Alert>
-      <Alert view="error">error</Alert>
-      <Alert view="info">info</Alert>
-      <Alert view="success">success</Alert>
-      <Alert view="warning">warning</Alert>
-    </div>
+      Lorem Ipsum is simply dummy text of the printing and typesetting
+      industry. Lorem Ipsum has been the industry's standard dummy text
+      ever since the 1500s, when an unknown printer took a galley of type
+      and scrambled it to make a type specimen book.
+    </Alert>
+  </Grid>
+</Grid>
 ```

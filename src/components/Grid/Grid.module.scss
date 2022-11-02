@@ -44,8 +44,12 @@ $direction: (
 }
 
 .grid {
+  width: 100%;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", "Helvetica", "Arial", sans-serif, "SF Pro Icons";
+  
   &__container {
     width: 100%;
+    max-width: 100%;
     display: flex;
     flex-wrap: wrap;
     box-sizing: border-box;
@@ -109,7 +113,6 @@ $direction: (
 
   @for $i from 0 to 11 {
     &__spacing-#{$i} {
-      margin: -$i * 4 + px;
       width: calc(100% + #{$padding * $i + 'px'});
     }
 

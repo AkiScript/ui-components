@@ -69,5 +69,11 @@
     &__active {
         background: #006EDB;
         color: #fff;
+
+        &-outlined {
+            background-color: #fff;
+            color: #000;
+            border: 2px solid #006EDB;
+        }
     }
 }
